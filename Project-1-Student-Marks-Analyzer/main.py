@@ -22,3 +22,11 @@ top_scores = np.max(marks, axis=0)
 print("\nTop Score In Each Subject\n")
 for i, subject in enumerate(subjects):
     print(subject, ":", top_scores[i])
+
+total_marks = np.sum(marks, axis=1)
+
+ranking = np.argsort(total_marks)[::-1]
+
+print("\nStudent Ranking\n")
+for rank, index in enumerate(ranking, start=1):
+    print(rank, "-", students[index], "(Total:", total_marks[index], ")")
