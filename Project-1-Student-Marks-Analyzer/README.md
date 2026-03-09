@@ -11,3 +11,7 @@ Features:
 Technologies:
 Python
 NumPy
+
+## Output
+
+![Program Output](result.png)
