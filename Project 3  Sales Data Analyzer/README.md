@@ -12,3 +12,7 @@ Features:
 Tech Stack:
 Python
 NumPy
+
+## Sample Output
+
+![Program Output](result3.png)
