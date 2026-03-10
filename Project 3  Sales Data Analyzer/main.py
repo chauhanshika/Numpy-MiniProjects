@@ -1,6 +1,5 @@
 import numpy as np
 
-# sales data: products × regions × months
 sales = np.array([
     [[200, 220, 250], [180, 190, 210]],
     [[150, 160, 170], [140, 150, 160]],
@@ -8,4 +7,7 @@ sales = np.array([
 ])
 
 total_sales = np.sum(sales)
+region_sales = np.sum(sales, axis=(0,2))
+
 print("Total Sales:", total_sales)
+print("Sales per Region:", region_sales)
