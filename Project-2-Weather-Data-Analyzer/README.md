@@ -12,3 +12,5 @@ Features:
 Tech Stack:
 Python
 NumPy
+
+![Program Output](result.png)
