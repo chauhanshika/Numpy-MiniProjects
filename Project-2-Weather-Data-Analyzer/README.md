@@ -13,4 +13,4 @@ Tech Stack:
 Python
 NumPy
 
-![Program Output](result.png)
+![Program Output](result2.png)
