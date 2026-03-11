@@ -1,6 +1,5 @@
 import numpy as np
 
-# Simulated grayscale image (5x5 pixel matrix)
 image = np.array([
     [50, 80, 90, 120, 150],
     [60, 70, 100, 130, 160],
@@ -9,5 +8,11 @@ image = np.array([
     [20, 40, 80, 140, 200]
 ])
 
-print("Original Image Matrix:\n")
+# Increase brightness
+bright_image = image + 40
+
+print("Original Image:\n")
 print(image)
+
+print("\nBrightened Image:\n")
+print(bright_image)
