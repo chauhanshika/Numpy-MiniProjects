@@ -8,11 +8,11 @@ image = np.array([
     [20, 40, 80, 140, 200]
 ])
 
-# Increase brightness
 bright_image = image + 40
+inverted_image = 255 - image
+threshold_image = np.where(image > 100, 255, 0)
 
-print("Original Image:\n")
-print(image)
-
-print("\nBrightened Image:\n")
-print(bright_image)
+print("Original Image:\n", image)
+print("\nBrightened Image:\n", bright_image)
+print("\nInverted Image:\n", inverted_image)
+print("\nThreshold Image:\n", threshold_image)
