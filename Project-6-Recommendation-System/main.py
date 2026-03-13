@@ -8,10 +8,19 @@ ratings = np.array([
     [0, 1, 5, 4]
 ])
 
-# cosine similarity function
 def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
-sim = cosine_similarity(ratings[0], ratings[1])
+target_user = ratings[0]
 
-print("Similarity between User 1 and User 2:", sim)
+similarities = []
+
+for i in range(len(ratings)):
+    sim = cosine_similarity(target_user, ratings[i])
+    similarities.append(sim)
+
+similarities = np.array(similarities)
+print("\nUser Similarities:\n", similarities)
+
+most_similar_user = np.argmax(similarities[1:]) + 1
+print("\nMost Similar User Index:", most_similar_user)
