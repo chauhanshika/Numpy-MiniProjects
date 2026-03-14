@@ -8,11 +8,20 @@ data = np.array([
     [160, 55]
 ])
 
-# standardization
 mean = np.mean(data, axis=0)
 std = np.std(data, axis=0)
 
 standardized_data = (data - mean) / std
 
-print("Standardized Data:\n")
-print(standardized_data)
+cov_matrix = np.cov(standardized_data.T)
+
+eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+
+# choose principal component
+principal_component = eigenvectors[:, 0]
+
+# project data
+reduced_data = standardized_data.dot(principal_component)
+
+print("\nPCA Result:\n")
+print(reduced_data)
