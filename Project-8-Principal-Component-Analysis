@@ -1,0 +1,18 @@
+import numpy as np
+
+data = np.array([
+    [170, 65],
+    [165, 59],
+    [180, 80],
+    [175, 75],
+    [160, 55]
+])
+
+# standardization
+mean = np.mean(data, axis=0)
+std = np.std(data, axis=0)
+
+standardized_data = (data - mean) / std
+
+print("Standardized Data:\n")
+print(standardized_data)
