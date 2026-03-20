@@ -1,12 +1,23 @@
 import numpy as np
+import time
 
 data = np.random.randint(1, 100, size=1000000)
 
-mean_val = np.mean(data)
-max_val = np.max(data)
-min_val = np.min(data)
+# NumPy computation
+start = time.time()
+mean_np = np.mean(data)
+end = time.time()
 
-print("Dataset Size:", len(data))
-print("Mean:", mean_val)
-print("Max:", max_val)
-print("Min:", min_val)
+print("NumPy Mean:", mean_np)
+print("NumPy Time:", end - start)
+
+# Loop computation
+start = time.time()
+total = 0
+for val in data:
+    total += val
+mean_loop = total / len(data)
+end = time.time()
+
+print("\nLoop Mean:", mean_loop)
+print("Loop Time:", end - start)
